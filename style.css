@@ -1,9 +1,13 @@
+body {
+  margin: auto 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .zone {
   cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  font-size: 10em;
-  border-radius: 4px;
+  color: #fff;
+  font-size: 2em;
+  /* border-radius: 4px; */
   border: 1px solid #bbb;
   transition: all 0.3s linear;
 }
@@ -17,6 +21,83 @@
     inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
   box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px,
     inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+}
+
+.box:hover {
+  transform: rotate(-7deg);
+  -webkit-transform: rotate(-7deg);
+  -moz-transform: rotate(-7deg);
+  -o-transform: rotate(-7deg);
+}
+
+/* Nav */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.main-nav {
+  display: flex;
+  list-style: none;
+  font-size: 0.7em;
+  margin: 0;
+}
+
+.push {
+  margin-left: auto;
+}
+
+li {
+  padding: 20px;
+}
+
+a {
+  color: #f5f5f6;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-nav {
+    font-size: 0.5em;
+    padding: 0px;
+  }
+}
+
+/* COVER */
+.container {
+  display: flex;
+  padding: 60px;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.cover {
+  width: 30rem;
+  margin: auto;
+}
+
+/* GRID */
+.grid-wrapper {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.box img {
+  width: 100%;
+}
+
+.box {
+  background-color: #444444;
+  padding: 80px;
+  margin: 20px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
 }
 
 /*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
@@ -50,29 +131,6 @@
 /***********************************************************************
  *  Red Background
  **********************************************************************/
-.red {
-  background: #c655be; /* Old browsers */
-  background: -moz-linear-gradient(top, #c655be 0%, #cf0404 100%); /* FF3.6+ */
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, #c655be),
-    color-stop(100%, #cf0404)
-  ); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(
-    top,
-    #c655be 0%,
-    #cf0404 100%
-  ); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(
-    top,
-    #c655be 0%,
-    #cf0404 100%
-  ); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #c655be 0%, #cf0404 100%); /* IE10+ */
-  background: linear-gradient(top, #c655be 0%, #cf0404 100%); /* W3C */
-}
 
 /***********************************************************************
  *  Yellow Background
@@ -144,77 +202,4 @@
     #60abf8 44%,
     #4096ee 100%
   ); /* W3C */
-}
-
-/***********************************************************************
- *  Purple Background
- **********************************************************************/
-.purple {
-  background: #a88beb; /* Old browsers */
-  background: -moz-linear-gradient(
-    top,
-    #a88beb 0%,
-    #f1a7f1 44%,
-    #f8ceec 100%
-  ); /* FF3.6+ */
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, #a88beb),
-    color-stop(44%, #f1a7f1),
-    color-stop(100%, #f8ceec)
-  ); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(
-    top,
-    #a88beb 0%,
-    #f1a7f1 44%,
-    #f8ceec 100%
-  ); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(
-    top,
-    #a88beb 0%,
-    #f1a7f1 44%,
-    #f8ceec 100%
-  ); /* Opera 11.10+ */
-  background: -ms-linear-gradient(
-    top,
-    #a88beb 0%,
-    #f1a7f1 44%,
-    #f8ceec 100%
-  ); /* IE10+ */
-  background: linear-gradient(
-    top,
-    #a88beb 0%,
-    #f1a7f1 44%,
-    #f8ceec 100%
-  ); /* W3C */
-}
-
-/***********************************************************************
- *  Brown Background
- **********************************************************************/
-.brown {
-  background: #f6e6b4; /* Old browsers */
-  background: -moz-linear-gradient(top, #f6e6b4 0%, #ed9017 100%); /* FF3.6+ */
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, #f6e6b4),
-    color-stop(100%, #ed9017)
-  ); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(
-    top,
-    #f6e6b4 0%,
-    #ed9017 100%
-  ); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(
-    top,
-    #f6e6b4 0%,
-    #ed9017 100%
-  ); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #f6e6b4 0%, #ed9017 100%); /* IE10+ */
-  background: linear-gradient(top, #f6e6b4 0%, #ed9017 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=0 ); /* IE6-9 */
 }
